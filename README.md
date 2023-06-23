@@ -1,10 +1,11 @@
 
-![Logo](https://drive.google.com/file/d/1-rsuIZo5d8EyPfNMi0EwVO3zBGN0PqDD/view?usp=sharing)
+
+![Logo](https://github.com/dhruv061/Sound-Prank/assets/96719397/205e27fe-2736-4451-93a2-d9da3660e1ab)
 
 
 # Sound Prank
 
-Introducing Sound Prank , the ultimate sound prank app designed to bring laughter and entertainment to your pranking adventures! With a vast collection of crazy sounds and realistic prank calls, this app is guaranteed to make you the ultimate prankster among your friends and loved ones.
+Introducing Sound Prank, the ultimate sound prank app designed to bring laughter and entertainment to your pranking adventures! With a vast collection of crazy sounds and realistic prank calls, this app is guaranteed to make you the ultimate prankster among your friends and loved ones.
 
 Sound Prank offers a wide range of hilarious sound effects that you can use to prank anyone in your vicinity. From funny animal sounds to unexpected noises, this app has it all. Choose from a diverse selection of sound categories, including "Animals," "Cartoons," "Funny Noises," and more. Surprise your friends with a sudden burst of laughter or create a spooky atmosphere that will send chills down their spines.
 
@@ -25,22 +26,16 @@ Remember, laughter is the best prank, and with Sound Prank Master, you'll have a
 
 
 ## Demo
-https://drive.google.com/file/d/1Jt6Q13RkuxyQ5tS_2rUdsiWep-FqvAFx/view?usp=share_link
+
 
 
 ## Features
-
-- Easy to calculate SPI,CPI,CGPA
-- Convert CGPA to into %
-- User Friendly UI
-- A vast collection of crazy sound effects to    
-  choose from Sound categories including Gun Shoot, Warning Siren, Funny Noises, and more.
-
 - Realistic prank calls with pre-recorded scripts
 - Fool your friends with calls from celebrities, TV characters, and more.
 - Share your favorite pranks via social media
 - User-friendly interface for easy navigation
-- Regular updates with new sound pranks and prank call scripts-
+- Regular updates with new sound pranks and prank call scripts.
+
 ## 🔗 Links
 [![project](https://img.shields.io/badge/Sound-Prank-000?style=for-the-badge&logo=ko-fi&logoColor=white)]()
 
@@ -59,6 +54,4 @@ Get ready to unleash hilarious pranks with Sound Prank Master! This ultimate sou
 
 
 ## Screenshots
-
-![App Screenshot](https://drive.google.com/filed1sD8OYFBL6Xtx8grlCrOj_tbuiCe7Csvq/view?usp=share_link)
-
+![Full App (1)](https://github.com/dhruv061/Sound-Prank/assets/96719397/3acf096a-bf91-4766-ba77-fa4266fedbec)
