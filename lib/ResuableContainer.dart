@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 class ResuableContainer extends StatelessWidget {
-  double marginLeft;
-  double marginRight;
-  String boxColor;
-  String img;
-  double imgHeight;
-  double imgWidth;
-  String title;
-  Function function;
+  final double marginLeft;
+  final double marginRight;
+  final String boxColor;
+  final String img;
+  final double imgHeight;
+  final double imgWidth;
+  final String title;
+  final Function function;
 
   ResuableContainer({
     Key? key,

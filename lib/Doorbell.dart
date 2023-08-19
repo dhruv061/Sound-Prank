@@ -1,11 +1,14 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:sound_prank/ResuableCircle.dart';
 
-class Doorbell extends StatelessWidget {
+class Doorbell extends StatefulWidget {
+  @override
+  State<Doorbell> createState() => _DoorbellState();
+}
+
+class _DoorbellState extends State<Doorbell> {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -100,7 +103,8 @@ class Doorbell extends StatelessWidget {
                             ResuableCircle(
                               marginLeft: width / 25,
                               margintop: 10,
-                              boxColor: "#FF7134",
+                              // boxColor: "#FF7134",
+                              boxColor: "#FF2D34",
                               img: "assets/images/Doorbell/Doorbell1.png",
                               imgHeight: 90,
                               imgWidth: 90,
@@ -109,7 +113,7 @@ class Doorbell extends StatelessWidget {
                               title: "Doorbell 1",
                               titlePaddingLeft: 18,
                               titlePaddingTop: 3,
-                              function: () {
+                              function: () async {
                                 AudioPlayer().play(AssetSource(
                                     'sounds/Doorbell/Doorbell1.mp3'));
                               },

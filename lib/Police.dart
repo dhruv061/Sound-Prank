@@ -1,12 +1,11 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:sound_prank/ResuableCircle.dart';
 
 class Police extends StatelessWidget {
-  AudioPlayer audioPlayer = AudioPlayer();
+  final AudioPlayer audioPlayer = AudioPlayer();
+
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -72,43 +71,6 @@ class Police extends StatelessWidget {
                           ),
                         ),
 
-                        // //Stop Btn
-                        // Padding(
-                        //   padding: const EdgeInsets.only(left: 10),
-                        //   child: Container(
-                        //     height: height / 15,
-                        //     width: width / 4,
-                        //     decoration: BoxDecoration(
-                        //       color: HexColor("#81F6D6"),
-                        //       borderRadius: BorderRadius.circular(15),
-                        //       boxShadow: [
-                        //         BoxShadow(
-                        //           color: Colors.grey.withOpacity(0.7),
-                        //           spreadRadius: 1,
-                        //           blurRadius: 4,
-                        //           offset: const Offset(1.4, 1.2),
-                        //         ),
-                        //       ],
-                        //     ),
-                        //     child: InkWell(
-                        //       onTap: () {
-                        //         AudioPlayer().stop();
-                        //       },
-                        //       child: Center(
-                        //         child: Text(
-                        //           "STOP",
-                        //           style: const TextStyle(
-                        //             fontSize: 20,
-                        //             fontFamily: "Mitr",
-                        //             color: Colors.black,
-                        //             fontWeight: FontWeight.w400,
-                        //           ),
-                        //         ),
-                        //       ),
-                        //     ),
-                        //   ),
-                        // ),
-
                         //Vadal-2
                         Padding(
                           padding: const EdgeInsets.only(left: 110),
@@ -127,6 +89,7 @@ class Police extends StatelessWidget {
                         ),
                       ],
                     ),
+
                     //Sound-1 & Sound-2
                     Row(
                       children: [

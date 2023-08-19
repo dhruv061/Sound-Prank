@@ -1,7 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:sound_prank/AirHorn.dart';
 import 'package:sound_prank/Breaking.dart';
@@ -27,7 +25,6 @@ class HomeScreen extends StatelessWidget {
           children: [
             Stack(
               children: [
-                
                 //POW
                 Center(
                   child: Container(
@@ -73,15 +70,13 @@ class HomeScreen extends StatelessWidget {
                 ),
               ],
             ),
-
             const SizedBox(height: 12),
-
             Stack(
               children: [
                 //For All Boxes
                 Container(
                   // color: Color.fromARGB(255, 235, 59, 255),
-                  height: height / 1.17,
+                  // height: height / 1.17,
                   width: width / 1,
                   child: Column(
                     children: [

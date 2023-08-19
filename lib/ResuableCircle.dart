@@ -3,18 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 class ResuableCircle extends StatelessWidget {
-  double marginLeft;
-  double margintop;
-  String boxColor;
-  String img;
-  double imgHeight;
-  double imgWidth;
-  double imgMarginLeft;
-  double imgMarginTop;
-  String title;
-  Function function;
-  double titlePaddingLeft;
-  double titlePaddingTop;
+  final double marginLeft;
+  final double margintop;
+  final String boxColor;
+  final String img;
+  final double imgHeight;
+  final double imgWidth;
+  final double imgMarginLeft;
+  final double imgMarginTop;
+  final String title;
+  final Function function;
+  final double titlePaddingLeft;
+  final double titlePaddingTop;
 
   ResuableCircle({
     Key? key,
