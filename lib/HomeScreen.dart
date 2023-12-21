@@ -1,5 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:sound_prank/AirHorn.dart';
 import 'package:sound_prank/Breaking.dart';
@@ -12,7 +13,39 @@ import 'package:sound_prank/nextScreen.dart';
 
 import 'Doorbell.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  late InterstitialAd interstitialAd;
+  bool isAdLoaded = false;
+
+  void initState() {
+    super.initState();
+    initInterstitialAd();
+  }
+
+  //for initInterstitialAd
+  initInterstitialAd() {
+    InterstitialAd.load(
+      adUnitId: 'ca-app-pub-4176044746344249/8049657040',
+      request: AdRequest(),
+      adLoadCallback: InterstitialAdLoadCallback(
+        onAdLoaded: (ad) {
+          interstitialAd = ad;
+          setState(() {
+            isAdLoaded = true;
+          });
+        },
+        onAdFailedToLoad: ((err) {
+          interstitialAd.dispose();
+        }),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -94,6 +127,10 @@ class HomeScreen extends StatelessWidget {
                             title: "AirHorn",
                             function: () {
                               nextScreen(context, AirHorn());
+                              //for ad
+                              if (isAdLoaded) {
+                                interstitialAd.show();
+                              }
                             },
                           ),
 
@@ -108,6 +145,10 @@ class HomeScreen extends StatelessWidget {
                             title: "Breaking",
                             function: () {
                               nextScreen(context, Breaking());
+                              //for ad
+                              if (isAdLoaded) {
+                                interstitialAd.show();
+                              }
                             },
                           ),
                         ],
@@ -127,6 +168,10 @@ class HomeScreen extends StatelessWidget {
                             title: "Doorbell",
                             function: () {
                               nextScreen(context, Doorbell());
+                              //for ad
+                              if (isAdLoaded) {
+                                interstitialAd.show();
+                              }
                             },
                           ),
 
@@ -141,6 +186,10 @@ class HomeScreen extends StatelessWidget {
                             title: "Gunshoot",
                             function: () {
                               nextScreen(context, GunShoot());
+                              //for ad
+                              if (isAdLoaded) {
+                                interstitialAd.show();
+                              }
                             },
                           ),
                         ],
@@ -160,6 +209,10 @@ class HomeScreen extends StatelessWidget {
                             title: "Horror",
                             function: () {
                               nextScreen(context, Horror());
+                              //for ad
+                              if (isAdLoaded) {
+                                interstitialAd.show();
+                              }
                             },
                           ),
 
@@ -174,6 +227,10 @@ class HomeScreen extends StatelessWidget {
                             title: "Police",
                             function: () {
                               nextScreen(context, Police());
+                              //for ad
+                              if (isAdLoaded) {
+                                interstitialAd.show();
+                              }
                             },
                           ),
                         ],

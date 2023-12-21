@@ -1,10 +1,45 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:sound_prank/ResuableCircle.dart';
 
-class Police extends StatelessWidget {
-  final AudioPlayer audioPlayer = AudioPlayer();
+class Police extends StatefulWidget {
+  @override
+  State<Police> createState() => _PoliceState();
+}
+
+class _PoliceState extends State<Police> {
+  final player = AudioPlayer();
+
+  late InterstitialAd interstitialAd;
+
+  bool isAdLoaded = false;
+
+  void initState() {
+    super.initState();
+    initInterstitialAd();
+  }
+
+  //for initInterstitialAd
+  initInterstitialAd() {
+    InterstitialAd.load(
+      adUnitId: 'ca-app-pub-4176044746344249/8049657040',
+      request: AdRequest(),
+      adLoadCallback: InterstitialAdLoadCallback(
+        onAdLoaded: (ad) {
+          interstitialAd = ad;
+          setState(() {
+            isAdLoaded = true;
+          });
+        },
+        onAdFailedToLoad: ((err) {
+          interstitialAd.dispose();
+        }),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -51,44 +86,23 @@ class Police extends StatelessWidget {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    //Vadal's
-                    Row(
-                      children: [
-                        //Vadal-1
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Container(
-                            height: height / 7.6,
-                            width: width / 3.2,
-                            decoration: const BoxDecoration(
-                              // color: Colors.white,
-                              image: DecorationImage(
-                                image: AssetImage(
-                                    "assets/images/BottomBlasting.png"),
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
+                    //Stop Button
+                    InkWell(
+                      onTap: () {
+                        player.stop();
+                      },
+                      child: SvgPicture.asset(
+                        'assets/images/stopIcon.svg',
+                        width: 70,
+                        height: 70,
+                        colorFilter: ColorFilter.mode(
+                          HexColor('#FF0000'),
+                          BlendMode.srcIn,
                         ),
-
-                        //Vadal-2
-                        Padding(
-                          padding: const EdgeInsets.only(left: 110),
-                          child: Container(
-                            height: height / 7.6,
-                            width: width / 3.2,
-                            decoration: const BoxDecoration(
-                              // color: Colors.white,
-                              image: DecorationImage(
-                                image: AssetImage(
-                                    "assets/images/BottomBlasting.png"),
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
+
+                    SizedBox(height: 15),
 
                     //Sound-1 & Sound-2
                     Row(
@@ -107,8 +121,13 @@ class Police extends StatelessWidget {
                           titlePaddingLeft: 18,
                           titlePaddingTop: 3,
                           function: () {
-                            AudioPlayer().play(
+                            player.play(
                                 AssetSource('sounds/Police/PoliceSiren1.mp3'));
+
+                            //for ad
+                            if (isAdLoaded) {
+                              interstitialAd.show();
+                            }
                           },
                         ),
 
@@ -126,8 +145,13 @@ class Police extends StatelessWidget {
                           titlePaddingLeft: 30,
                           titlePaddingTop: 3,
                           function: () {
-                            AudioPlayer().play(
+                            player.play(
                                 AssetSource('sounds/Police/PoliceSiren2.mp3'));
+
+                            //for ad
+                            if (isAdLoaded) {
+                              interstitialAd.show();
+                            }
                           },
                         ),
                       ],
@@ -150,8 +174,13 @@ class Police extends StatelessWidget {
                           titlePaddingLeft: 18,
                           titlePaddingTop: 3,
                           function: () {
-                            AudioPlayer().play(
+                            player.play(
                                 AssetSource('sounds/Police/PoliceSiren3.mp3'));
+
+                            //for ad
+                            if (isAdLoaded) {
+                              interstitialAd.show();
+                            }
                           },
                         ),
 
@@ -169,8 +198,13 @@ class Police extends StatelessWidget {
                           titlePaddingLeft: 30,
                           titlePaddingTop: 3,
                           function: () {
-                            AudioPlayer().play(
+                            player.play(
                                 AssetSource('sounds/Police/PoliceSiren4.mp3'));
+
+                            //for ad
+                            if (isAdLoaded) {
+                              interstitialAd.show();
+                            }
                           },
                         ),
                       ],
@@ -193,8 +227,13 @@ class Police extends StatelessWidget {
                           titlePaddingLeft: 18,
                           titlePaddingTop: 3,
                           function: () {
-                            AudioPlayer().play(
+                            player.play(
                                 AssetSource('sounds/Police/PoliceSiren5.mp3'));
+
+                            //for ad
+                            if (isAdLoaded) {
+                              interstitialAd.show();
+                            }
                           },
                         ),
 
@@ -212,8 +251,13 @@ class Police extends StatelessWidget {
                           titlePaddingLeft: 30,
                           titlePaddingTop: 3,
                           function: () {
-                            AudioPlayer().play(
+                            player.play(
                                 AssetSource('sounds/Police/PoliceSiren6.mp3'));
+
+                            //for ad
+                            if (isAdLoaded) {
+                              interstitialAd.show();
+                            }
                           },
                         ),
                       ],
