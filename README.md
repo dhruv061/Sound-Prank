@@ -1,7 +1,6 @@
 
 
-![Logo](https://github.com/dhruv061/Sound-Prank/assets/96719397/205e27fe-2736-4451-93a2-d9da3660e1ab)
-
+![UpdatedLogo](https://github.com/dhruv061/Sound-Prank/assets/96719397/54d6dc90-5b9e-41eb-bff5-ba0240078197)
 
 # Sound Prank
 
